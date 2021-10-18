@@ -1,0 +1,290 @@
+import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+import '../home2_page/home2_page_widget.dart';
+import '../home_page/home_page_widget.dart';
+import '../trainer_page/trainer_page_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class ProfileWidget extends StatefulWidget {
+  ProfileWidget({Key key}) : super(key: key);
+
+  @override
+  _ProfileWidgetState createState() => _ProfileWidgetState();
+}
+
+class _ProfileWidgetState extends State<ProfileWidget> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: scaffoldKey,
+      body: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(-0.95, 0.3),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                    child: IconButton(
+                      onPressed: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Home2PageWidget(),
+                          ),
+                        );
+                      },
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Colors.black,
+                        size: 30,
+                      ),
+                      iconSize: 30,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(0, 0),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 40, 5, 0),
+                    child: Text(
+                      'Profile',
+                      style: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 70, 0, 0),
+              child: Image.asset(
+                'assets/images/profile.jpg',
+                width: 114,
+                height: 114,
+                fit: BoxFit.cover,
+              ),
+            ),
+            Align(
+              alignment: Alignment(0, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                child: Text(
+                  'Bambang Sugianto',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment(-0.74, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 65, 0, 0),
+                child: Text(
+                  'Gender   : Male',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment(-0.74, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 0, 46, 0),
+                child: Text(
+                  'Age       : 29',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment(-0.74, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 0, 5, 0),
+                child: Text(
+                  'Height  : 170cm',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment(-0.74, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(4, 0, 50, 0),
+                child: Text(
+                  'Weigh  : 70kg',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment(-0.74, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(24, 0, 0, 0),
+                child: Text(
+                  'Email    : Bambang@gmail.com',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment(-0.74, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(24, 0, 0, 0),
+                child: Text(
+                  'Phone Number : 0812 0000 0000',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 70, 0, 0),
+              child: FFButtonWidget(
+                onPressed: () {
+                  print('Button pressed ...');
+                },
+                text: 'Edit',
+                options: FFButtonOptions(
+                  width: 142,
+                  height: 42,
+                  color: Color(0xFFD9001B),
+                  textStyle: FlutterFlowTheme.subtitle2.override(
+                    fontFamily: 'Poppins',
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                    width: 1,
+                  ),
+                  borderRadius: 71,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
+              child: InkWell(
+                onTap: () async {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomePageWidget(),
+                    ),
+                  );
+                },
+                child: Text(
+                  'Log Out',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 65, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(-0.01, -0.55),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Home2PageWidget(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/messageImage_1624377620384.jpg',
+                          width: 35,
+                          height: 35,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(-0.71, 0),
+                    child: InkWell(
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TrainerPageWidget(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/images/messageImage_1624377615442.jpg',
+                        width: 48,
+                        height: 49,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.68, -0.12),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProfileWidget(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/messageImage_1624377625713.jpg',
+                          width: 35,
+                          height: 35,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

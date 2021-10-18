@@ -1,0 +1,628 @@
+import '../bad_meals/bad_meals_widget.dart';
+import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+import '../home2_page/home2_page_widget.dart';
+import '../profile/profile_widget.dart';
+import '../trainer_page/trainer_page_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class GoodMealsWidget extends StatefulWidget {
+  GoodMealsWidget({Key key}) : super(key: key);
+
+  @override
+  _GoodMealsWidgetState createState() => _GoodMealsWidgetState();
+}
+
+class _GoodMealsWidgetState extends State<GoodMealsWidget> {
+  TextEditingController textController1;
+  TextEditingController textController1;
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    textController1 = TextEditingController();
+    textController1 = TextEditingController();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: scaffoldKey,
+      body: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(0.06, 0.17),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(1, 30, 10, 20),
+                    child: Image.asset(
+                      'assets/images/HABFIT2.png',
+                      width: 114,
+                      height: 45,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.95, 0.3),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                    child: IconButton(
+                      onPressed: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Home2PageWidget(),
+                          ),
+                        );
+                      },
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Colors.black,
+                        size: 30,
+                      ),
+                      iconSize: 30,
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Align(
+              alignment: Alignment(-1.5, 2.26),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(30, 5, 70, 0),
+                child: TextFormField(
+                  controller: textController1,
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    hintText: 'Search',
+                    hintStyle: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                      fontSize: 14,
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(50),
+                        bottomRight: Radius.circular(50),
+                        topLeft: Radius.circular(50),
+                        topRight: Radius.circular(50),
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(50),
+                        bottomRight: Radius.circular(50),
+                        topLeft: Radius.circular(50),
+                        topRight: Radius.circular(50),
+                      ),
+                    ),
+                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                  ),
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment(0.92, -1.13),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 2, 0, 4),
+                child: IconButton(
+                  onPressed: () {
+                    print('IconButton pressed ...');
+                  },
+                  icon: Icon(
+                    Icons.search,
+                    color: Colors.black,
+                    size: 35,
+                  ),
+                  iconSize: 35,
+                ),
+              ),
+            ),
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(-1.5, 2.26),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(30, 5, 70, 0),
+                    child: TextFormField(
+                      controller: textController1,
+                      obscureText: false,
+                      decoration: InputDecoration(
+                        hintText: 'Search',
+                        hintStyle: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                          fontSize: 14,
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(50),
+                            bottomRight: Radius.circular(50),
+                            topLeft: Radius.circular(50),
+                            topRight: Radius.circular(50),
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(50),
+                            bottomRight: Radius.circular(50),
+                            topLeft: Radius.circular(50),
+                            topRight: Radius.circular(50),
+                          ),
+                        ),
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                      ),
+                      style: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 14,
+                      ),
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(0.92, -1.13),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 2, 0, 4),
+                    child: IconButton(
+                      onPressed: () {
+                        print('IconButton pressed ...');
+                      },
+                      icon: Icon(
+                        Icons.search,
+                        color: Colors.black,
+                        size: 35,
+                      ),
+                      iconSize: 35,
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(0.48, 0.44),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => BadMealsWidget(),
+                          ),
+                        );
+                      },
+                      text: 'Bad Meals',
+                      options: FFButtonOptions(
+                        width: 113,
+                        height: 35,
+                        color: Color(0xFFD9001B),
+                        textStyle: FlutterFlowTheme.subtitle2.override(
+                          fontFamily: 'Poppins',
+                          color: Colors.black,
+                          fontSize: 13,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: 35,
+                      ),
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.51, 0.77),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                    child: FFButtonWidget(
+                      onPressed: () {
+                        print('Button pressed ...');
+                      },
+                      text: 'Good Meals',
+                      options: FFButtonOptions(
+                        width: 113,
+                        height: 35,
+                        color: Color(0xFF95F204),
+                        textStyle: FlutterFlowTheme.subtitle2.override(
+                          fontFamily: 'Poppins',
+                          color: Colors.black,
+                          fontSize: 13,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: 35,
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(0.75, 0),
+                    child: Image.asset(
+                      'assets/images/messageImage_1624376162097.jpg',
+                      width: 138,
+                      height: 91,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(-0.76, 0),
+                    child: Image.asset(
+                      'assets/images/messageImage_1624376154721.jpg',
+                      width: 132,
+                      height: 91,
+                      fit: BoxFit.cover,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(0.46, 0),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                    child: Text(
+                      'Nasi merah',
+                      style: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.79, 0),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                    child: Text(
+                      'Telur Rebus',
+                      style: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(0.71, 0),
+                  child: Text(
+                    'Energi           : 112 kkal',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.74, 0),
+                  child: Text(
+                    'Energi              : 78 kkal',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(-0.76, 0),
+                  child: Text(
+                    'Lemak             : 5 g',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(0.57, 0),
+                  child: Text(
+                    'Lemak          : 7 g',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(0.67, 0),
+                  child: Text(
+                    'Karbohidrat  : 24 g',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.76, 0),
+                  child: Text(
+                    'Karbohidrat  : 0,6 g',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(0.63, 0),
+                  child: Text(
+                    'Protein            : 2 g',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.76, 0),
+                  child: Text(
+                    'Protein            : 6 g',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(0.75, 0),
+                    child: Image.asset(
+                      'assets/images/messageImage_1624376174168.jpg',
+                      width: 138,
+                      height: 91,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(-0.76, 0),
+                    child: Image.asset(
+                      'assets/images/messageImage_1624376167119.jpg',
+                      width: 132,
+                      height: 91,
+                      fit: BoxFit.cover,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(0.6, 0.8),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                    child: Text(
+                      'Kacang almond',
+                      style: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.73, 1.6),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                    child: Text(
+                      'Dada ayam panggang',
+                      style: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(0.74, 0),
+                  child: Text(
+                    'Energi           : 164 kkal',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.75, 0),
+                  child: Text(
+                    'Energi              : 313 kkal',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(-0.75, 0),
+                  child: Text(
+                    'Lemak             : 15,92 g',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(0.7, 0),
+                  child: Text(
+                    'Lemak          : 14,36 g',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(0.69, 0),
+                  child: Text(
+                    'Karbohidrat  : 5,6 g',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.76, 0),
+                  child: Text(
+                    'Karbohidrat  : 11,38 g',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(0.74, 0),
+                  child: Text(
+                    'Protein            : 6,03 g',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.75, 0),
+                  child: Text(
+                    'Protein            : 29,36 g',
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 95, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(-0.01, -0.55),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Home2PageWidget(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/messageImage_1624377620384.jpg',
+                          width: 35,
+                          height: 35,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(-0.71, 0),
+                    child: InkWell(
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TrainerPageWidget(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/images/messageImage_1624377615442.jpg',
+                        width: 48,
+                        height: 49,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.68, -0.12),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProfileWidget(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/messageImage_1624377625713.jpg',
+                          width: 35,
+                          height: 35,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

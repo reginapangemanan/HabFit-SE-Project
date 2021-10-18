@@ -1,0 +1,189 @@
+import '../datadiri/datadiri_widget.dart';
+import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+import '../register_page/register_page_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class GenderWidget extends StatefulWidget {
+  GenderWidget({Key key}) : super(key: key);
+
+  @override
+  _GenderWidgetState createState() => _GenderWidgetState();
+}
+
+class _GenderWidgetState extends State<GenderWidget> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: scaffoldKey,
+      body: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(0.06, 0.17),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(1, 30, 10, 20),
+                    child: Image.asset(
+                      'assets/images/HABFIT2.png',
+                      width: 114,
+                      height: 45,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.95, 0.3),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                    child: IconButton(
+                      onPressed: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RegisterPageWidget(),
+                          ),
+                        );
+                      },
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Colors.black,
+                        size: 30,
+                      ),
+                      iconSize: 30,
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 160, 0, 0),
+              child: Text(
+                'Gender',
+                style: FlutterFlowTheme.bodyText1.override(
+                  fontFamily: 'Poppins',
+                  color: Colors.black,
+                  fontSize: 21,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 100, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(0.52, 0),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DatadiriWidget(),
+                          ),
+                        );
+                      },
+                      text: 'Button',
+                      options: FFButtonOptions(
+                        width: 139,
+                        height: 133,
+                        color: FlutterFlowTheme.tertiaryColor,
+                        textStyle: FlutterFlowTheme.subtitle2.override(
+                          fontFamily: 'Poppins',
+                          color: Colors.white,
+                        ),
+                        borderSide: BorderSide(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                        borderRadius: 12,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.37, -0.14),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 45, 0, 0),
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => DatadiriWidget(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/gender2.jpg',
+                          width: 23,
+                          height: 39,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(-0.54, 0),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DatadiriWidget(),
+                          ),
+                        );
+                      },
+                      text: 'Button',
+                      options: FFButtonOptions(
+                        width: 139,
+                        height: 133,
+                        color: FlutterFlowTheme.tertiaryColor,
+                        textStyle: FlutterFlowTheme.subtitle2.override(
+                          fontFamily: 'Poppins',
+                          color: Colors.white,
+                        ),
+                        borderSide: BorderSide(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                        borderRadius: 12,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(-0.39, -0.07),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 48, 0, 0),
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => DatadiriWidget(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/gender1.jpg',
+                          width: 33,
+                          height: 32,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

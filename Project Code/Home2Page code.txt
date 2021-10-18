@@ -1,0 +1,288 @@
+import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+import '../good_meals/good_meals_widget.dart';
+import '../groceriesandequipment/groceriesandequipment_widget.dart';
+import '../profile/profile_widget.dart';
+import '../trainer_page/trainer_page_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class Home2PageWidget extends StatefulWidget {
+  Home2PageWidget({Key key}) : super(key: key);
+
+  @override
+  _Home2PageWidgetState createState() => _Home2PageWidgetState();
+}
+
+class _Home2PageWidgetState extends State<Home2PageWidget> {
+  TextEditingController textController;
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    textController = TextEditingController();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: scaffoldKey,
+      body: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Stack(
+            children: [
+              Align(
+                alignment: Alignment(0.06, 0.17),
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(1, 30, 10, 20),
+                  child: Image.asset(
+                    'assets/images/HABFIT2.png',
+                    width: 114,
+                    height: 45,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              )
+            ],
+          ),
+          Stack(
+            children: [
+              Align(
+                alignment: Alignment(-1.5, 2.26),
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(30, 5, 70, 0),
+                  child: TextFormField(
+                    controller: textController,
+                    obscureText: false,
+                    decoration: InputDecoration(
+                      hintText: 'Search',
+                      hintStyle: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 14,
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(50),
+                          bottomRight: Radius.circular(50),
+                          topLeft: Radius.circular(50),
+                          topRight: Radius.circular(50),
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(50),
+                          bottomRight: Radius.circular(50),
+                          topLeft: Radius.circular(50),
+                          topRight: Radius.circular(50),
+                        ),
+                      ),
+                      contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    ),
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment(0.92, -1.13),
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(0, 2, 0, 4),
+                  child: IconButton(
+                    onPressed: () {
+                      print('IconButton pressed ...');
+                    },
+                    icon: Icon(
+                      Icons.search,
+                      color: Colors.black,
+                      size: 35,
+                    ),
+                    iconSize: 35,
+                  ),
+                ),
+              )
+            ],
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+            child: Image.asset(
+              'assets/images/food.jpg',
+              width: 338,
+              height: 170,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
+            child: FFButtonWidget(
+              onPressed: () async {
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => TrainerPageWidget(),
+                  ),
+                );
+              },
+              text: 'Trainer',
+              options: FFButtonOptions(
+                width: 338,
+                height: 102,
+                color: Color(0xFFAAAAAA),
+                textStyle: FlutterFlowTheme.subtitle2.override(
+                  fontFamily: 'Poppins',
+                  color: Colors.white,
+                  fontSize: 18,
+                ),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
+                  width: 1,
+                ),
+                borderRadius: 15,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
+            child: FFButtonWidget(
+              onPressed: () async {
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => GroceriesandequipmentWidget(),
+                  ),
+                );
+              },
+              text: 'Groceries & Equipment',
+              options: FFButtonOptions(
+                width: 338,
+                height: 102,
+                color: Color(0xFFAAAAAA),
+                textStyle: FlutterFlowTheme.subtitle2.override(
+                  fontFamily: 'Poppins',
+                  color: Colors.white,
+                  fontSize: 18,
+                ),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
+                  width: 1,
+                ),
+                borderRadius: 15,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
+            child: FFButtonWidget(
+              onPressed: () async {
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => GoodMealsWidget(),
+                  ),
+                );
+              },
+              text: 'Meals',
+              options: FFButtonOptions(
+                width: 338,
+                height: 102,
+                color: Color(0xFFAAAAAA),
+                textStyle: FlutterFlowTheme.subtitle2.override(
+                  fontFamily: 'Poppins',
+                  color: Colors.white,
+                  fontSize: 18,
+                ),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
+                  width: 1,
+                ),
+                borderRadius: 15,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(0, 70, 0, 0),
+            child: Stack(
+              children: [
+                Align(
+                  alignment: Alignment(-0.01, -0.55),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+                    child: InkWell(
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Home2PageWidget(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/images/messageImage_1624377620384.jpg',
+                        width: 35,
+                        height: 35,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.71, 0),
+                  child: InkWell(
+                    onTap: () async {
+                      await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TrainerPageWidget(),
+                        ),
+                      );
+                    },
+                    child: Image.asset(
+                      'assets/images/messageImage_1624377615442.jpg',
+                      width: 48,
+                      height: 49,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(0.68, -0.12),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+                    child: InkWell(
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ProfileWidget(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/images/messageImage_1624377625713.jpg',
+                        width: 35,
+                        height: 35,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}

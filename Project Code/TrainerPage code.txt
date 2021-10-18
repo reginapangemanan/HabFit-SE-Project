@@ -1,0 +1,511 @@
+import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
+import '../home2_page/home2_page_widget.dart';
+import '../profile/profile_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class TrainerPageWidget extends StatefulWidget {
+  TrainerPageWidget({Key key}) : super(key: key);
+
+  @override
+  _TrainerPageWidgetState createState() => _TrainerPageWidgetState();
+}
+
+class _TrainerPageWidgetState extends State<TrainerPageWidget> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: scaffoldKey,
+      body: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(-0.95, 0.3),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                    child: IconButton(
+                      onPressed: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Home2PageWidget(),
+                          ),
+                        );
+                      },
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Colors.black,
+                        size: 30,
+                      ),
+                      iconSize: 30,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(0, 0),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 40, 5, 0),
+                    child: Text(
+                      'Choose your Trainer',
+                      style: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 80, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(0.46, 0),
+                    child: Image.asset(
+                      'assets/images/w2.jpg',
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(-0.52, 0),
+                    child: Image.asset(
+                      'assets/images/w1.jpg',
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.cover,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(-0.52, 0),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 0, 70, 0),
+                      child: Image.asset(
+                        'assets/images/p1.png',
+                        width: 100,
+                        height: 100,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.13, -0.54),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 20, 31, 0),
+                      child: Text(
+                        'Name',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.09, -0.11),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 37, 31, 0),
+                      child: Text(
+                        'Age',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.23, -0.16),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 55, 25, 0),
+                      child: Text(
+                        'Descripton',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.85, 0),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 70, 30, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.77, -1.02),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 70, 30, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.93, -1.04),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 70, 31, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.6, -1.03),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(5, 70, 30, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.69, -1.04),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 70, 30, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(-0.52, 0),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 0, 70, 0),
+                      child: Image.asset(
+                        'assets/images/p1.png',
+                        width: 100,
+                        height: 100,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.13, -0.54),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 20, 31, 0),
+                      child: Text(
+                        'Name',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.09, -0.11),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 37, 31, 0),
+                      child: Text(
+                        'Age',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.23, -0.16),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 55, 25, 0),
+                      child: Text(
+                        'Descripton',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.85, 0),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 70, 30, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.77, -1.02),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 70, 30, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.93, -1.04),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 70, 31, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.6, -1.03),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(5, 70, 30, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.69, -1.04),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 70, 30, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(-0.52, 0),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 0, 70, 0),
+                      child: Image.asset(
+                        'assets/images/p1.png',
+                        width: 100,
+                        height: 100,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.13, -0.54),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 20, 31, 0),
+                      child: Text(
+                        'Name',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.09, -0.11),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 37, 31, 0),
+                      child: Text(
+                        'Age',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.23, -0.16),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 55, 25, 0),
+                      child: Text(
+                        'Descripton',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.85, 0),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 70, 30, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.77, -1.02),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 70, 30, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.93, -1.04),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 70, 31, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.6, -1.03),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(5, 70, 30, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.69, -1.04),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 70, 30, 0),
+                      child: Image.asset(
+                        'assets/images/star.jpg',
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 150, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(-0.01, -0.55),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Home2PageWidget(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/messageImage_1624377620384.jpg',
+                          width: 35,
+                          height: 35,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(-0.71, 0),
+                    child: InkWell(
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TrainerPageWidget(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/images/messageImage_1624377615442.jpg',
+                        width: 48,
+                        height: 49,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.68, -0.12),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProfileWidget(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/messageImage_1624377625713.jpg',
+                          width: 35,
+                          height: 35,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

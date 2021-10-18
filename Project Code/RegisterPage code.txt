@@ -1,0 +1,367 @@
+import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+import '../gender/gender_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class RegisterPageWidget extends StatefulWidget {
+  RegisterPageWidget({Key key}) : super(key: key);
+
+  @override
+  _RegisterPageWidgetState createState() => _RegisterPageWidgetState();
+}
+
+class _RegisterPageWidgetState extends State<RegisterPageWidget> {
+  TextEditingController textController1;
+  TextEditingController textController2;
+  TextEditingController textController3;
+  TextEditingController textController4;
+  bool passwordVisibility1;
+  TextEditingController textController5;
+  bool passwordVisibility2;
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    textController1 = TextEditingController();
+    textController2 = TextEditingController();
+    textController3 = TextEditingController();
+    textController4 = TextEditingController();
+    passwordVisibility1 = false;
+    textController5 = TextEditingController();
+    passwordVisibility2 = false;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: scaffoldKey,
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(0, 0, 0, 1),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: EdgeInsets.fromLTRB(0, 80, 0, 0),
+                child: Image.asset(
+                  'assets/images/HABFIT2.png',
+                  width: 150,
+                  height: 61,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(0, 70, 300, 0),
+                child: Text(
+                  'Name',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 5, 40, 0),
+                child: TextFormField(
+                  controller: textController1,
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    hintText: '  Name',
+                    hintStyle: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40),
+                        bottomRight: Radius.circular(40),
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40),
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40),
+                        bottomRight: Radius.circular(40),
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40),
+                      ),
+                    ),
+                    contentPadding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                  ),
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(0, 10, 240, 0),
+                child: Text(
+                  'Phone Number',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 5, 40, 0),
+                child: TextFormField(
+                  controller: textController2,
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    hintText: 'Phone Number',
+                    hintStyle: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40),
+                        bottomRight: Radius.circular(40),
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40),
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40),
+                        bottomRight: Radius.circular(40),
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40),
+                      ),
+                    ),
+                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                  ),
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                  keyboardType: TextInputType.number,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(0, 10, 305, 0),
+                child: Text(
+                  'Email',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 5, 40, 0),
+                child: TextFormField(
+                  controller: textController3,
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    hintText: 'Email',
+                    hintStyle: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40),
+                        bottomRight: Radius.circular(40),
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40),
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40),
+                        bottomRight: Radius.circular(40),
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40),
+                      ),
+                    ),
+                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                  ),
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                  keyboardType: TextInputType.emailAddress,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(0, 10, 280, 0),
+                child: Text(
+                  'Password',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 5, 40, 0),
+                child: TextFormField(
+                  controller: textController4,
+                  obscureText: !passwordVisibility1,
+                  decoration: InputDecoration(
+                    hintText: 'Password',
+                    hintStyle: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40),
+                        bottomRight: Radius.circular(40),
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40),
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40),
+                        bottomRight: Radius.circular(40),
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40),
+                      ),
+                    ),
+                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    suffixIcon: InkWell(
+                      onTap: () => setState(
+                        () => passwordVisibility1 = !passwordVisibility1,
+                      ),
+                      child: Icon(
+                        passwordVisibility1
+                            ? Icons.visibility_outlined
+                            : Icons.visibility_off_outlined,
+                        color: Color(0xFF757575),
+                        size: 22,
+                      ),
+                    ),
+                  ),
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(0, 10, 225, 0),
+                child: Text(
+                  'Confirm Password',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 5, 40, 0),
+                child: TextFormField(
+                  controller: textController5,
+                  obscureText: !passwordVisibility2,
+                  decoration: InputDecoration(
+                    hintText: 'Confirm Password',
+                    hintStyle: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Poppins',
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40),
+                        bottomRight: Radius.circular(40),
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40),
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40),
+                        bottomRight: Radius.circular(40),
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40),
+                      ),
+                    ),
+                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    suffixIcon: InkWell(
+                      onTap: () => setState(
+                        () => passwordVisibility2 = !passwordVisibility2,
+                      ),
+                      child: Icon(
+                        passwordVisibility2
+                            ? Icons.visibility_outlined
+                            : Icons.visibility_off_outlined,
+                        color: Color(0xFF757575),
+                        size: 22,
+                      ),
+                    ),
+                  ),
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(2, 70, 0, 0),
+                child: FFButtonWidget(
+                  onPressed: () async {
+                    await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => GenderWidget(),
+                      ),
+                    );
+                  },
+                  text: 'Register',
+                  options: FFButtonOptions(
+                    width: 207,
+                    height: 46,
+                    color: Color(0xFFD9001B),
+                    textStyle: FlutterFlowTheme.subtitle2.override(
+                      fontFamily: 'Poppins',
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: 122,
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

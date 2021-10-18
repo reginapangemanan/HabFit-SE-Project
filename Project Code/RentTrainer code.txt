@@ -1,0 +1,374 @@
+import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+import '../home2_page/home2_page_widget.dart';
+import '../payment/payment_widget.dart';
+import '../profile/profile_widget.dart';
+import '../trainer_page/trainer_page_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class RentTrainerWidget extends StatefulWidget {
+  RentTrainerWidget({Key key}) : super(key: key);
+
+  @override
+  _RentTrainerWidgetState createState() => _RentTrainerWidgetState();
+}
+
+class _RentTrainerWidgetState extends State<RentTrainerWidget> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: scaffoldKey,
+      body: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(-0.95, 0.3),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                    child: IconButton(
+                      onPressed: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TrainerPageWidget(),
+                          ),
+                        );
+                      },
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Colors.black,
+                        size: 30,
+                      ),
+                      iconSize: 30,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(0, 0),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 40, 5, 0),
+                    child: Text(
+                      'Rent your Trainer',
+                      style: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Align(
+              alignment: Alignment(0.46, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 50, 110, 0),
+                child: Image.asset(
+                  'assets/images/w2.jpg',
+                  width: 100,
+                  height: 100,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+              child: Text(
+                'Coach Bambang Sugianto',
+                style: FlutterFlowTheme.bodyText1.override(
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment(-0.74, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 45, 0, 0),
+                child: Text(
+                  'Gender   : Male',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 15,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment(-0.74, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                child: Text(
+                  'Age          : 29',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 15,
+                  ),
+                ),
+              ),
+            ),
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(-0.72, 0),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                    child: Image.asset(
+                      'assets/images/star.jpg',
+                      width: 16,
+                      height: 16,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.8, 0),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                    child: Image.asset(
+                      'assets/images/star.jpg',
+                      width: 16,
+                      height: 16,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.55, -1.05),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                    child: Image.asset(
+                      'assets/images/star.jpg',
+                      width: 16,
+                      height: 16,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.64, 0),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                    child: Image.asset(
+                      'assets/images/star.jpg',
+                      width: 16,
+                      height: 16,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.47, 0),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                    child: Image.asset(
+                      'assets/images/star.jpg',
+                      width: 16,
+                      height: 16,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Align(
+              alignment: Alignment(-0.74, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 10, 10, 0),
+                child: Text(
+                  'Experience  :',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 15,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment(-0.74, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(30, 5, 0, 0),
+                child: Text(
+                  'Berpengalaman sebagai personal trainer \\n5 tahun, membantu client mengatur pola \\nmakan dengan diet yang baik dan jadwal \\nolahraga yang baik.',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 15,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 20, 220, 0),
+              child: Text(
+                'Training Package',
+                style: FlutterFlowTheme.bodyText1.override(
+                  fontFamily: 'Poppins',
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment(-0.74, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(32, 5, 0, 0),
+                child: Text(
+                  '1 month training package                       Rp. 500.000',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment(-0.74, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(31, 8, 0, 0),
+                child: Text(
+                  '3 month training package                      Rp. 500.000',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment(-0.74, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(31, 8, 0, 0),
+                child: Text(
+                  '6 month training package                      Rp. 500.000',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment(-0.74, 0),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(31, 8, 0, 0),
+                child: Text(
+                  '9 month training package                      Rp. 500.000',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
+              child: FFButtonWidget(
+                onPressed: () async {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PaymentWidget(),
+                    ),
+                  );
+                },
+                text: 'Rent',
+                options: FFButtonOptions(
+                  width: 202,
+                  height: 45,
+                  color: Color(0xFFD9001B),
+                  textStyle: FlutterFlowTheme.subtitle2.override(
+                    fontFamily: 'Poppins',
+                    color: Colors.white,
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                    width: 1,
+                  ),
+                  borderRadius: 108,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 60, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(-0.01, -0.55),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Home2PageWidget(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/messageImage_1624377620384.jpg',
+                          width: 35,
+                          height: 35,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(-0.71, 0),
+                    child: InkWell(
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TrainerPageWidget(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/images/messageImage_1624377615442.jpg',
+                        width: 48,
+                        height: 49,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.68, -0.12),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProfileWidget(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/messageImage_1624377625713.jpg',
+                          width: 35,
+                          height: 35,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

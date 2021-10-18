@@ -1,0 +1,453 @@
+import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+import '../home2_page/home2_page_widget.dart';
+import '../profile/profile_widget.dart';
+import '../trainer_page/trainer_page_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class GroceriesandequipmentWidget extends StatefulWidget {
+  GroceriesandequipmentWidget({Key key}) : super(key: key);
+
+  @override
+  _GroceriesandequipmentWidgetState createState() =>
+      _GroceriesandequipmentWidgetState();
+}
+
+class _GroceriesandequipmentWidgetState
+    extends State<GroceriesandequipmentWidget> {
+  TextEditingController textController;
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    textController = TextEditingController();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: scaffoldKey,
+      body: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(0.06, 0.17),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(1, 30, 10, 20),
+                    child: Image.asset(
+                      'assets/images/HABFIT2.png',
+                      width: 114,
+                      height: 45,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-0.95, 0.3),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                    child: IconButton(
+                      onPressed: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Home2PageWidget(),
+                          ),
+                        );
+                      },
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Colors.black,
+                        size: 30,
+                      ),
+                      iconSize: 30,
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment(-1.5, 2.26),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(30, 5, 70, 0),
+                    child: TextFormField(
+                      controller: textController,
+                      obscureText: false,
+                      decoration: InputDecoration(
+                        hintText: 'Search',
+                        hintStyle: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                          fontSize: 14,
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(50),
+                            bottomRight: Radius.circular(50),
+                            topLeft: Radius.circular(50),
+                            topRight: Radius.circular(50),
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(50),
+                            bottomRight: Radius.circular(50),
+                            topLeft: Radius.circular(50),
+                            topRight: Radius.circular(50),
+                          ),
+                        ),
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                      ),
+                      style: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 14,
+                      ),
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(0.92, -1.13),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 2, 0, 4),
+                    child: IconButton(
+                      onPressed: () {
+                        print('IconButton pressed ...');
+                      },
+                      icon: Icon(
+                        Icons.search,
+                        color: Colors.black,
+                        size: 35,
+                      ),
+                      iconSize: 35,
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(-0.92, 0),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(15, 0, 1, 0),
+                      child: Image.asset(
+                        'assets/images/equip.jpg',
+                        width: 125,
+                        height: 125,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.39, -0.66),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                      child: Text(
+                        'Alat olahraga sixpack care',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.83, 0.58),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 60, 0, 0),
+                      child: FFButtonWidget(
+                        onPressed: () {
+                          print('Button pressed ...');
+                        },
+                        text: 'View More',
+                        options: FFButtonOptions(
+                          width: 93,
+                          height: 37,
+                          color: Color(0xFFD9001B),
+                          textStyle: FlutterFlowTheme.subtitle2.override(
+                            fontFamily: 'Poppins',
+                            color: Colors.white,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                          ),
+                          borderSide: BorderSide(
+                            color: Colors.transparent,
+                            width: 1,
+                          ),
+                          borderRadius: 7,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(-0.92, 0),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(15, 0, 1, 0),
+                      child: Image.asset(
+                        'assets/images/barbel.jpg',
+                        width: 126,
+                        height: 84,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.06, -0.57),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
+                      child: Text(
+                        'Dumbbell 20kg',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.83, 0.58),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 60, 0, 0),
+                      child: FFButtonWidget(
+                        onPressed: () {
+                          print('Button pressed ...');
+                        },
+                        text: 'View More',
+                        options: FFButtonOptions(
+                          width: 93,
+                          height: 37,
+                          color: Color(0xFFD9001B),
+                          textStyle: FlutterFlowTheme.subtitle2.override(
+                            fontFamily: 'Poppins',
+                            color: Colors.white,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                          ),
+                          borderSide: BorderSide(
+                            color: Colors.transparent,
+                            width: 1,
+                          ),
+                          borderRadius: 7,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 45, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(-0.92, 0),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(15, 0, 1, 0),
+                      child: Image.asset(
+                        'assets/images/pisang.jpg',
+                        width: 125,
+                        height: 125,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(-0.05, -0.78),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
+                      child: Text(
+                        'Pisang',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.83, 0.58),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 60, 0, 0),
+                      child: FFButtonWidget(
+                        onPressed: () {
+                          print('Button pressed ...');
+                        },
+                        text: 'View More',
+                        options: FFButtonOptions(
+                          width: 93,
+                          height: 37,
+                          color: Color(0xFFD9001B),
+                          textStyle: FlutterFlowTheme.subtitle2.override(
+                            fontFamily: 'Poppins',
+                            color: Colors.white,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                          ),
+                          borderSide: BorderSide(
+                            color: Colors.transparent,
+                            width: 1,
+                          ),
+                          borderRadius: 7,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 35, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(-0.92, 0),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(15, 0, 1, 0),
+                      child: Image.asset(
+                        'assets/images/brokoli.jpg',
+                        width: 134,
+                        height: 95,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(-0.05, -0.73),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
+                      child: Text(
+                        'Brokoli',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.83, 0.58),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 60, 0, 0),
+                      child: FFButtonWidget(
+                        onPressed: () {
+                          print('Button pressed ...');
+                        },
+                        text: 'View More',
+                        options: FFButtonOptions(
+                          width: 93,
+                          height: 37,
+                          color: Color(0xFFD9001B),
+                          textStyle: FlutterFlowTheme.subtitle2.override(
+                            fontFamily: 'Poppins',
+                            color: Colors.white,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                          ),
+                          borderSide: BorderSide(
+                            color: Colors.transparent,
+                            width: 1,
+                          ),
+                          borderRadius: 7,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 80, 0, 0),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment(-0.01, -0.55),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Home2PageWidget(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/messageImage_1624377620384.jpg',
+                          width: 35,
+                          height: 35,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(-0.71, 0),
+                    child: InkWell(
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TrainerPageWidget(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/images/messageImage_1624377615442.jpg',
+                        width: 48,
+                        height: 49,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0.68, -0.12),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProfileWidget(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/messageImage_1624377625713.jpg',
+                          width: 35,
+                          height: 35,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
